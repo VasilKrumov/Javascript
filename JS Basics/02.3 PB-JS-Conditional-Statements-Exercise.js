@@ -1,4 +1,4 @@
-function solve(firstTime, secondTime, thirdTime) {
+function calculateSeconds(firstTime, secondTime, thirdTime) {
     firstTime = Number(firstTime)
     secondTime = Number(secondTime)
     thirdTime = Number(thirdTime)
@@ -14,7 +14,7 @@ function solve(firstTime, secondTime, thirdTime) {
     }
 }
 
-function solve2(points) {
+function bonusPoints(points) {
     points = Number(points)
     let bonusPoints
 
@@ -38,7 +38,7 @@ function solve2(points) {
     console.log(points + bonusPoints)
 }
 
-function solve3(speed) {
+function speedInformation(speed) {
     speed = Number(speed)
 
     if (speed <= 10) {
@@ -54,7 +54,7 @@ function solve3(speed) {
     }
 }
 
-function solve4(toConvert, firstUnit, secondUnit) {
+function coverter(toConvert, firstUnit, secondUnit) {
     toConvert = Number(toConvert)
     let result
 
@@ -87,7 +87,7 @@ function solve4(toConvert, firstUnit, secondUnit) {
     console.log(result.toFixed(3))
 }
 
-function solve5(hour, minutes) {
+function timePlusFifteen(hour, minutes) {
     hour = Number(hour)
     minutes = Number(minutes)
 
@@ -106,7 +106,7 @@ function solve5(hour, minutes) {
     }
 }
 
-function solve6(budget, extras, priceForExtra) {
+function godzillaVsKong(budget, extras, priceForExtra) {
     budget = Number(budget)
     extras = Number(extras)
     priceForExtra = Number(priceForExtra)
@@ -131,7 +131,7 @@ function solve6(budget, extras, priceForExtra) {
     }
 }
 
-function solve7(recordS, distanceM, timePerMeter) {
+function worldSwimmingRecord(recordS, distanceM, timePerMeter) {
     recordS = Number(recordS)
     distanceM = Number(distanceM)
     timePerMeter = Number(timePerMeter)
@@ -150,7 +150,7 @@ function solve7(recordS, distanceM, timePerMeter) {
     }
 }
 
-function solve8(salary, gpa, minSalary) {
+function scolarship(salary, gpa, minSalary) {
     salary = Number(salary)
     gpa = Number(gpa)
     minSalary = Number(minSalary)
@@ -182,5 +182,3 @@ function solve8(salary, gpa, minSalary) {
         console.log('You cannot get a scholarship!')
     }
 }
-
-solve8('480.00', '4.60', '450.00')
