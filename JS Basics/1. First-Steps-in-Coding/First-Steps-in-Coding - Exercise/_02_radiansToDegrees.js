@@ -1,5 +1,5 @@
 function radiansToDegrees(input) {
-    let radians = Number(input)
-    let degrees = (radians * 180) / Math.PI
-    console.log(degrees.toFixed(0))
+  const radians = Number(input);
+  const degrees = (radians * 180) / Math.PI;
+  console.log(degrees.toFixed(0));
 }

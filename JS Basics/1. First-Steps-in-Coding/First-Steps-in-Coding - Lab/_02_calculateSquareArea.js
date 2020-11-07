@@ -1,5 +1,5 @@
 function calculateSquareArea(input) {
-    let singleSide = Number(input)
-    let squareResult = singleSide * singleSide
-    console.log(squareResult)
+  const singleSide = Number(input);
+  const squareResult = singleSide * singleSide;
+  console.log(squareResult);
 }
