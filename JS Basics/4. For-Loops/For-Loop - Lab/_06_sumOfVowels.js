@@ -17,6 +17,8 @@ function sumOfVowels(str) {
       case 'u':
         sum += 5;
         break;
+      default:
+        break;
     }
   }
   console.log(sum);

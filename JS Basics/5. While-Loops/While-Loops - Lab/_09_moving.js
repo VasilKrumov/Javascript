@@ -1,4 +1,4 @@
-(input) => {
+function space(input) {
   const width = Number(input.shift());
   const length = Number(input.shift());
   const height = Number(input.shift());
@@ -18,4 +18,4 @@
       `No more free space! You need ${luggage - room} Cubic meters more.`
     );
   else console.log(`${room - luggage} Cubic meters left.`);
-};
+}
