@@ -2,10 +2,12 @@
     "extends": [
         "wesbos"
     ],
-    "rules" : {
-        "no-plusplus":"off",
-        "no-param-reassign":"off",
-        "no-shadow":"off",
-        "no-restricted-properties":"off"
+    "rules": {
+        "no-plusplus": "off",
+        "no-param-reassign": "off",
+        "no-shadow": "off",
+        "no-restricted-properties": "off",
+        "no-restricted-globals":"off",
+        "semi": "off"
     }
 }
