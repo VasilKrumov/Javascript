@@ -8,6 +8,6 @@
         "no-shadow": "off",
         "no-restricted-properties": "off",
         "no-restricted-globals":"off",
-        "semi": "off"
+        "semi": "off",
     }
 }
