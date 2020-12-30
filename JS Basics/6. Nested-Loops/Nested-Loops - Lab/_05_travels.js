@@ -12,6 +12,7 @@ function travels(input) {
       current += Number(line);
       if (current >= needed) console.log(`Going to ${destination}!`);
     }
+
     line = input.shift();
   }
 }
