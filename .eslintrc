@@ -8,6 +8,17 @@
         "no-shadow": "off",
         "no-restricted-properties": "off",
         "no-restricted-globals":"off",
-        "semi": "off"
+        "semi": "off",
+        "prettier/prettier": [
+            "error",
+            {
+              "trailingComma": "es5",
+              "singleQuote": true,
+              "printWidth": 120,
+              "tabWidth": 4,
+              "semi": false,
+              "endOfLine":"auto"
+            }
+          ]
     }
 }
