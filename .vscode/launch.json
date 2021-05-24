@@ -11,6 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
+            "runtimeExecutable": "/home/vk/.nvm/versions/node/v15.6.0/bin/node",
             "program": "${file}"
         }
     ]
