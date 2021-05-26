@@ -1,22 +1,24 @@
-function cookingByNumbers(input = []) {
-    const number = Number(input.shift())
+function cookingByNumbers(...operations) {
+    let number = Number(operations[0])
 
-    const operations = {
-        chop: (x) => x / 2,
-        dice: (x) => Math.sqrt(x),
-        spice: (x) => x + 1,
-        bake: (x) => x * 3,
-        fillet: (x) => x - x / 5,
-    }
+    for (let i = 1; i < operations.length; i++) {
+        const action = operations[i]
 
-    const cook = (number = 1, operations = {}, commands = [], index = 0) => {
-        if (!commands[index]) {
-            return
+        if (action === 'chop') {
+            number /= 2
+            console.log(number)
+        } else if (action === 'dice') {
+            number = Math.sqrt(number)
+            console.log(number)
+        } else if (action === 'spice') {
+            number += 1
+            console.log(number)
+        } else if (action == 'bake') {
+            number *= 3
+            console.log(number)
+        } else if (action === 'fillet') {
+            number -= 0.2 * number
+            console.log(number)
         }
-
-        console.log((number = operations[commands[index++]](number)))
-        cook(number, operations, commands, index)
     }
-
-    cook(number, operations, input)
 }

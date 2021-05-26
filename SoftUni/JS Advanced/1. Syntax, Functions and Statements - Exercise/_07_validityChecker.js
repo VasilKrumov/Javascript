@@ -1,10 +1,30 @@
-function validityChecker([x1 = 1, y1 = 1, x2 = 1, y2 = 1] = []) {
-    const validateDistance = ([x1 = 1, y1 = 1, x2 = 1, y2 = 1] = []) => {
-        const distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))
-        console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is ${Number.isInteger(distance) ? 'valid' : 'invalid'}`)
+function validityChecker(a, b, c, d) {
+    const x1 = Number(a)
+    const y1 = Number(b)
+    const x2 = Number(c)
+    const y2 = Number(d)
+
+    function distance(x1, y1, x2, y2) {
+        const distH = x1 - x2
+        const distY = y1 - y2
+        return Math.sqrt(distH ** 2 + distY ** 2)
     }
 
-    validateDistance([x1, y1, 0, 0])
-    validateDistance([x2, y2, 0, 0])
-    validateDistance([x1, y1, x2, y2])
+    if (Number.isInteger(distance(x1, y1, 0, 0))) {
+        console.log(`{${x1}, ${y1}} to {0, 0} is valid`)
+    } else {
+        console.log(`{${x1}, ${y1}} to {0, 0} is invalid`)
+    }
+
+    if (Number.isInteger(distance(x2, y2, 0, 0))) {
+        console.log(`{${x2}, ${y2}} to {0, 0} is valid`)
+    } else {
+        console.log(`{${x2}, ${y2}} to {0, 0} is invalid`)
+    }
+
+    if (Number.isInteger(distance(x1, y1, x2, y2))) {
+        console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is valid`)
+    } else {
+        console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is invalid`)
+    }
 }

@@ -1,28 +1,21 @@
-function roadRadar([speed = 1, area = ''] = []) {
-    const limits = {
-        residential: 20,
+function roadRadar(speed, type) {
+    const citySpeed = {
         city: 50,
-        interstate: 90,
         motorway: 130,
+        residential: 20,
+        interstate: 90,
     }
-
-    const speedings = {
-        0: 'speeding',
-        20: 'excessive speeding',
-        40: 'reckless driving',
+    speed = Number(speed)
+    const diff = speed - citySpeed[type]
+    if (citySpeed[type] >= speed && speed > 0) {
+        console.log(`Driving ${speed} km/h in a ${citySpeed[type]} zone`)
+    } else if (citySpeed[type] + 20 >= speed) {
+        console.log(`The speed is ${diff} km/h faster than the allowed speed of ${citySpeed[type]} - speeding`)
+    } else if (citySpeed[type] + 40 >= speed) {
+        console.log(
+            `The speed is ${diff} km/h faster than the allowed speed of ${citySpeed[type]} - excessive speeding`
+        )
+    } else {
+        console.log(`The speed is ${diff} km/h faster than the allowed speed of ${citySpeed[type]} - reckless driving`)
     }
-
-    const getOverSpeedPrint = (overLimit = 0, speedings = {}) => {
-        if (overLimit < 1) {
-            return
-        }
-
-        const printKey = Object.keys(speedings)
-            .sort((a, b) => b - a)
-            .find((over) => overLimit > over)
-
-        return speedings[printKey] || ''
-    }
-
-    return getOverSpeedPrint(speed - limits[area], speedings)
 }
