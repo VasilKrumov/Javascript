@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Application 2020</title>
+    <link rel="icon" type="image/png" href="../static/favicon.ico">
+    <link href="../static/css/site.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="/src/app.js" type="module"></script>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <a class="navbar-brand text-light" href="/">Movies</a>
+            <ul class="navbar-nav ml-auto ">
+
+                <div id="user">
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="welcomeMsg">Welcome, email</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="logoutBtn" href="javascript:void(0)">Logout</a>
+                    </li>
+                </div>
+                <div id="guest">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+
+        <section class="notifications" id="errorBox" style="display: none;">
+            <p class="notification-message">Message...</p>
+        </section>
+        <section class="notifications" id="successBox" style="display: none;background-color:rgba(1, 131, 29, 0.541);">
+            <p class="notification-message">Message...</p>
+        </section>
+
+
+        <main></main>
+
+        <footer class="page-footer font-small">
+            <div class="footer-copyright text-center py-3">© 2020
+                <a href="https://softuni.bg/trainings/2840/js-applications-june-2020/internal" class="text-dark">JS
+                    Applications</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
