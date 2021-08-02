@@ -1,11 +1,11 @@
-import { render } from '../../node_modules/lit-html/lit-html.js';
+import { render } from '../../node_modules/lit-html/lit-html.js'
 
-import { renderNavigation } from '../views/navigationView.js';
+import { renderNavigation } from '../views/navigationView.js'
 
-let navigationElement = document.querySelector('.navigation');
+let navigationElement = document.querySelector('.navigation')
 
 export function navigationMiddleware(ctx, next) {
-    render(renderNavigation(ctx), navigationElement);
+    render(renderNavigation(ctx), navigationElement)
 
-    next();
+    next()
 }

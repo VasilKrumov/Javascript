@@ -1,24 +1,23 @@
-import * as movieService from '../services/movieService.js';
-import { movieFormTemplate } from './templates/movieFormTemplate.js';
+import * as movieService from '../services/movieService.js'
+import { movieFormTemplate } from './templates/movieFormTemplate.js'
 
 export function addMoviePage(ctx) {
     const onSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
 
-        let formData = new FormData(e.currentTarget);
+        let formData = new FormData(e.currentTarget)
 
         // console.log(formData.get('title'));
-        let title = formData.get('title');
-        let description = formData.get('description');
-        let imageUrl = formData.get('imageUrl');
+        let title = formData.get('title')
+        let description = formData.get('description')
+        let imageUrl = formData.get('imageUrl')
 
-        movieService.create(title, imageUrl, description)
-            .then(res => {
-                console.log(res);
+        movieService.create(title, imageUrl, description).then((res) => {
+            console.log(res)
 
-                ctx.page.redirect('/movies');
-            });
+            ctx.page.redirect('/movies')
+        })
     }
 
-    ctx.render(movieFormTemplate(onSubmit));
+    ctx.render(movieFormTemplate(onSubmit))
 }

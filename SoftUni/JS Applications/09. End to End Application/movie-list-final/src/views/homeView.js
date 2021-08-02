@@ -1,4 +1,4 @@
-import { html } from '../../node_modules/lit-html/lit-html.js';
+import { html } from '../../node_modules/lit-html/lit-html.js'
 
 let homeTemplate = () => html`
     <section>
@@ -6,8 +6,8 @@ let homeTemplate = () => html`
 
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, ducimus.</p>
     </section>
-`;
+`
 
 export function homePage(ctx) {
-    ctx.render(homeTemplate());
+    ctx.render(homeTemplate())
 }
